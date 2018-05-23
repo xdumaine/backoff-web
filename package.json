@@ -1,0 +1,38 @@
+{
+    "name": "backoff-web",
+    "description": "Fibonacci and exponential backoffs.",
+    "version": "1.0.0",
+    "license": "MIT",
+    "author": "Xander Dumaine <xander.dumaine@genesys.com>",
+    "keywords": [
+        "backoff",
+        "retry",
+        "fibonacci",
+        "exponential"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/xdumaine/backoff-web.git"
+    },
+    "dependencies": {
+        "wildemitter": "^1.2.0"
+    },
+    "devDependencies": {
+        "nodeunit": "0.9",
+        "semistandard": "^12.0.1",
+        "sinon": "^5.0.7"
+    },
+    "scripts": {
+        "docco": "docco lib/*.js lib/strategy/* index.js",
+        "pretest": "npx semistandard src/ examples/ tests/ index.js",
+        "test": "node_modules/nodeunit/bin/nodeunit tests/"
+    },
+    "engines": {
+        "node": ">= 0.6"
+    },
+    "files": [
+        "index.js",
+        "lib",
+        "tests"
+    ]
+}
